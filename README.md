@@ -1,4 +1,4 @@
 # StickySticks
 
-Change the path of mongoose and create your Own Table And the application is ready to Go
+Change the path of mongoose to your own collection and create logins and note Table And the application is ready to Go
 
