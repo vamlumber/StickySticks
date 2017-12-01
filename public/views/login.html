@@ -1,0 +1,25 @@
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<div class="row ">
+  <div class="col-md-4 col-md-offset-4 login">
+        <h2>&numsp;&numsp;&numsp;&numsp;<span class="glyphicon glyphicon-tasks"></span>Stick-Notes</h2>
+        <wbr>
+          <div class="row">
+            <form name="loginf">
+            <input type="text" id="inputEmail" name="us_na" class="col-md-8 col-md-offset-2" ng-model="logn.user_Name" placeholder="User Name" required />
+          </div><br>
+          <div class="row">
+            <input type="password" id="inputPassword" name="pa_na" class="col-md-8 col-md-offset-2" ng-model="logn.password" placeholder="Password" required />
+          </div><br>
+          <div class="row">
+              <button class="btn btn-primary col-md-4 col-md-offset-1" ng-click="onLogin()">Login</button>
+              <a ui-sref="register" class="btn btn-success col-md-4 col-md-offset-2">Sign Up</a>
+          </div><br><br>
+          <div class="row">
+            <span class="col-md-10 col-md-offset-1 " ng-show="eroor" >Email or Password is in correct</span>
+          </div>
+        </form><br>
+  </div>
+</div>

@@ -1,0 +1,87 @@
+<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button class="navbar-toggle collapsed" data-toggle="collapse" data-target ="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">Toogle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a ui-sref="home" class="navbar-brand"><span class="glyphicon glyphicon-tasks"></span>Sticky-notes</a>
+			</div>
+			<div id="navbar" class="collapse navbar-collapse">
+				<ul class="nav navbar-nav">
+					<li class="active">
+						<a href="#">note</a>
+					</li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li class="dropdown">
+						<a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"  aria-expanded = "false">Username<span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="" ng-click="logout()">Logout</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+</nav>
+<br><br><br>
+<div class="row">
+	<div class="col-md-5">
+		<div class="row">
+			<div class="panel panel-success">
+  				<div class="panel-heading">
+    				<h3 class="panel-title">&numsp;&numsp;&numsp;Add Note</h3>
+  				</div>
+  				<div class="panel-body">
+    			<form class="form-horizontal"  name="addnote" novalidate>
+    				<fieldset>
+    					<div class="row form-group">
+    						<label class="col-md-3 control-label">Title :</label>
+    						<input type="text" name="title" ng-model="data.new_title" class="col-md-5" required>
+    					</div>
+    					<div class="row form-group">
+    						<label class="col-md-3 control-label">Type :</label>
+    						<select ng-model="data.new_type" class="col-md-5" >
+    							<option>Personel</option>
+    							<option>Buisness</option>
+    							<option>Work</option>
+    							<option>Schedule</option>
+    						</select>
+    					</div>
+    					<div class="row form-group">
+    						<label class="col-md-3 control-label">Title :</label>
+    						<textarea ng-model="data.new_note" rows="3"></textarea>
+    					</div>
+    					<div class="row form-group">
+    						<button class="btn btn-default col-md-3 col-md-offset-2" ng-click="reset()">Reset</button>
+    						<input type="submit" name="sumb1" value="Add Note" class="col-md-3 col-md-offset-1" ></input>
+    					</div>
+    				</fieldset>
+    			</form>
+  				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-md-7">
+			<div class="row">
+				<div class="col-md-5 col-md-offset-3">
+					<div class="input-group">
+						<div class="input-group-addon active">
+							<span class="glyphicon glyphicon-search"></span>
+						</div>
+					<input type="text" name="search" ng-model="search_note" class="form-control">			
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<ul>
+					
+				</ul>
+			</div>	
+	</div>
+</div>
+
+
+

@@ -1,0 +1,44 @@
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<div class="row ">
+  <div class="col-md-6 col-md-offset-3 login">
+        <h2>&numsp;&numsp;&numsp;&numsp;<span class="glyphicon glyphicon-tasks"></span>Stick-Notes</h2>
+        <br>
+        <form class="form-horizontal" name="regis" ng-submit="onSignUp()" novalidate >
+          <fieldset>
+            <legend>Register</legend>
+            <div class="row form-group">
+                <label class="col-md-4 control-label">User Name :</label>
+                <input type="text" name="usr_Name" ng-model="regis.new_user_Name" class="col-md-4" required />
+                <span class="col-md-3 help-block" ng-show="regis.usr_Name.$invalid && regis.usr_Name.$dirty">User Name is mandatory</span>
+            </div>
+            <div class="row form-group">
+                <label class="col-md-4 control-label">Name :</label>
+                <input type="text" name="nme" ng-model="regis.name" class="col-md-4" required />
+                <span class="col-md-4 help-block" ng-show="regis.nme.$error.required && regis.nme.$dirty">Name is mandatory</span>
+            </div>
+            <div class="row form-group">
+                <label class="col-md-4 control-label">Email :</label>
+                <input type="email" name="nwmail" ng-model="regis.new_email" class="col-md-4" required />
+                <span class="col-md-3 help-block" ng-show="regis.nwmail.$invalid && regis.nwmail.$dirty">Email is mandatory</span>
+            </div>
+            <div class="row form-group">
+                <label class="col-md-4 control-label">Password :</label>
+                <input type="password" name="nwpassword" ng-model="regis.newpass" class="col-md-4" required />
+                <span class="col-md-3 help-block" ng-show="regis.nwpassword.$invalid && regis.nwpassword.$dirty">Password is mandatory</span>
+            </div>
+            <div class="row form-group">
+                <label class="col-md-4 control-label">Confirm Password :</label>
+                <input type="password" name="conpass" ng-model="regis.conf_pass" class="col-md-4" required />
+                <span class="col-md-3 help-block" ng-show="regis.conpass.$invalid && regis.conpass.$dirty">Password is mandatory</span>
+            </div>
+            <div class="row form-group">
+                <button ui-sref="login" type="button" class="btn btn-default col-md-2 col-md-offset-4">Back</button>
+                <input type="submit" name="onSubmit" class="btn btn-primary col-md-2 col-md-offset-2" value="Sign Up" />
+            </div>
+            </fieldset>
+        </form>          
+  </div>
+</div>

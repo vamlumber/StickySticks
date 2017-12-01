@@ -1,0 +1,17 @@
+body {
+  background-color: #eee;
+}
+.login{
+
+  background-color: #A7A7A6;
+}
+
+.form-signin #inputemail{
+  margin-bottom: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.form-signin #inputpassword{
+  margin-bottom: 10px;
+  
+}
