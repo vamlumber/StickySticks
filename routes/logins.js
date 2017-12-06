@@ -48,13 +48,15 @@ passport.deserializeUser(function(id, done) {
 
 passport.use(new localStrategy(function (username,passsword,done) {
 	login.getUserByUsername(username,function () {
-		 if(err) throw err ;
+		 console.log(username);
+     if(err) throw err ;
 		 if(!logins){
 		 	console.log('unknown User');
 		 	return done(null, false,{message : 'Unkown User'});
 		 }
 		 login.comparePassword(password , logins.password,function (err,isMatch) {
-		 	if (err) throw err;
+		 	console.log(password);
+      if (err) throw err;
 		 	if (isMatch) {
 		 		return done(null,login);
 		 	} else {
@@ -65,8 +67,9 @@ passport.use(new localStrategy(function (username,passsword,done) {
 	});
 }));
 router.post('/login',passport.authenticate('local') , function (req,res,next) {
-	res.status(200);
+	
 	res.json(req.user);
+  res.status(200);
 
 });
 router.get('/logout',function (req,res) {
