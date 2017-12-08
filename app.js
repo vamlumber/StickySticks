@@ -14,6 +14,7 @@ var multer = require('multer');
 var flash = require('connect-flash');
 var mongo =require('mongodb');
 var mongoose = require('mongoose');
+require('./config/passport.js');
 var db = mongoose.connection;
 var app = express();
 app.use(express.static(__dirname + '/public'));

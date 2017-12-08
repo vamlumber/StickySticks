@@ -2,7 +2,7 @@ var mongoose = require('mongoose');
 mongoose.Promise = require('bluebird');
 var bcrypt = require ('bcrypt');
 
-var loginSchema = mongoose.Schema({
+var userSchema = mongoose.Schema({
 	username : {
 		type : String,
 		required : true,
@@ -23,7 +23,7 @@ var loginSchema = mongoose.Schema({
 	}
 });
 
-var login = module.exports = mongoose.model('login',loginSchema);
+var user = module.exports = mongoose.model('User',userSchema,'User');
 
 module.exports.getRegister = function (newR,callback) {
 		bcrypt.hash(newR.password,10,function (err,hash) {
